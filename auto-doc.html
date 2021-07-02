@@ -1,0 +1,198 @@
+<style>
+   *{
+      margin: 0%;
+      padding: 0;
+   }
+video#d8{
+   
+   height: 115vh;
+   width: 105%;
+   left: -50px;
+   position:absolute;
+   top: -30px;
+}
+video#d1{
+   
+   height: 30vh;
+   width: 40%;
+   left: -90px;
+   position:absolute;
+   top: 500px;
+}
+div#di1{
+   
+   height: 40vh;
+   width: 40%;
+   left: 30px;
+   position:absolute;
+   top: 80px;
+}
+div#d5{
+   
+   height: 40vh;
+   width: 40%;
+   left: 10px;
+   position:absolute;
+   top: 40px;
+}
+div#d2{
+   
+   height: 40vh;
+   width: 40%;
+   left: 1150px;
+   position:absolute;
+   top: 40px;
+}
+div#di2{
+   
+   height: 40vh;
+   width: 40%;
+   left: 1170px;
+   position:absolute;
+   top: 75px;
+}
+div#d3{
+   
+   height: 40vh;
+   width: 40%;
+   left: 1150px;
+   position:absolute;
+   top: 300px;
+}
+div#c1{
+   
+   height: 40vh;
+   width: 40%;
+   left: 1160px;
+   position:absolute;
+   top: 330px;
+}
+form#f1{
+   
+   height: 40vh;
+   width: 40%;
+   left: 1150px;
+   position:absolute;
+   top: 300px;
+}
+video#v1{
+   
+   height: 40vh;
+   width: 40%;
+   left: 1150px;
+   position:absolute;
+   top: 300px;
+}
+div#h5{
+   
+   height: 40vh;
+   width: 40%;
+   left: 600px;
+   position:absolute;
+   top: 10px;
+}
+div#d0{
+   
+   height: 115vh;
+   width: 105%;
+   left: 655px;
+   position:absolute;
+   top: 290px;
+}
+
+</style>
+<script>
+    function reverse(){
+             document.getElementById("id8").innerHTML = '<img id="i8" src="supream.png" alt="Cinque Terre" width="300" height="270">';   
+             document.getElementById("i1").src = "main-base.jpg";
+
+      // border: 5px dotted red;
+      // var r = document.getElementById("d1");
+      // r.style.border="5px solid blue";
+      // r.style.width="200px";
+    }
+    function display(){
+             document.getElementById("di1").innerHTML = '<img id="dis1" src="display.jpg" alt="Cinque Terre" width="300" height="300">';
+    }
+    function display1(){
+             document.getElementById("di2").innerHTML = 'looking for the car video to detect the car.... ';
+    }
+    function display2(){
+             document.getElementById("di2").innerHTML = 'looking for the car video to detect the car....<br><br><br>geting numberplate info.....';
+    }
+    function display3(){
+             document.getElementById("di2").innerHTML = 'looking for the car video to detect the car....<br><br><br>geting numberplate info.....<br><br><br>getting car info.....<br>...................................................';
+    }
+    function final(code) {
+       
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET","http://localhost/cardetect/owner.py?x="+code,true);
+        xhttp.send();
+        xhttp.onload=function (){
+             var output = xhttp.responseText
+             // var output= "hi hello"
+             document.getElementById("c1").innerHTML = output;
+        }}
+    
+
+    function cmd(code) {
+       var d = prompt("please enter podname","mydeploy1");
+       display2()
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET","http://localhost/cardetect/car.py?x="+code,true);
+        xhttp.send();
+        xhttp.onload=function (){
+             var output = xhttp.responseText
+             // var output= "hi hello"
+             document.getElementById("c1").innerHTML = output;
+             display()
+             xhttp.open("GET","http://localhost/cardetect/delay.py?x="+code,true); 
+              display3() 
+              final( )   
+           }
+    }
+	
+	
+</script>
+<section class="showcase">
+   <video id="d8"  src="loop2.mp4"muted loop autoplay ></video>
+   <video id="d1"  src="loop left.mp4"muted loop autoplay ></video>
+   <video id="v1"  src="glow.mov"muted loop autoplay ></video>
+   <div id ='h5'>
+      <img id="ih1" src="head.png" alt="Cinque Terre" width="310" height="100">
+   </div>
+   <div id ='d5'>
+      <img id="i5" src="CAR.png" alt="Cinque Terre" width="360" height="450">
+   </div>
+   <div id="di1">yo</div>
+   <div id ='d2'onmouseover="delayedGreeting();">
+      <img id="i2" src="process.png" alt="Cinque Terre" width="350" height="250">
+   </div>
+   <div id="di2"style="color:#7CFC00" width="450" height="500" fontSize = '200'>yooooo</div>
+    
+   <div id ='d3'>
+      <img id="i3" src="cardata.png" alt="Cinque Terre" width="350" height="400">
+   </div> 
+   <div id ='c1'style="color:#7CFC00" width="350" height="400">hello <br>
+   yo <br>
+how</div>
+   <div id ='d0'onclick="cmd()" onmouseover ="display1();getElementById('i8').width='240',getElementById('i8').height='240'" onmouseout ="getElementById('i8').width='230',getElementById('i8').height='230'">
+      <pre id="id8" ><img id="i8" src="mid1.png" alt="Cinque Terre" width='230' height='230'></pre>
+      </div>
+   
+</section> 
+
+
+
+
+
+  
+
+
+
+
+       
+
+    
+
+   
